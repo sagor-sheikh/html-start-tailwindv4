@@ -52,7 +52,12 @@ ol {
         font-weight: inherit;
     }
 }
-
+.just {
+    &_doit {
+        color: red;
+        background-color: black;
+    }
+}
 button {
     border: none;
     cursor: pointer;
@@ -103,9 +108,9 @@ textarea {
         background-color: #222;
     }
 
-    &.lg::before {
-        @apply w-0.5 h-[60px] lg:h-[60px] opacity-40
-    }
+    // &.lg::before {
+    //     @apply w-0.5 h-[60px] lg:h-[60px] opacity-40
+    // }
 
     &.lgx::before {
         @apply h-[173px] w-[1px] bg-[#B3B6B9] opacity-[0.3]

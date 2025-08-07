@@ -33,7 +33,7 @@ function generateHtmlPlugins(rootDir) {
 
 const htmlFiles = generateHtmlPlugins(rootDirectory);
 //partial files
-const partialFiles = ["loader", "header","footer"].map((partial) => {
+const partialFiles = ["loader", "header", "footer", "newcard"].map((partial) => {
   return {
     tag: `<include-${partial} />`,
     content: fs.readFileSync(
@@ -57,7 +57,7 @@ module.exports = {
       {
         test: /\.css$/i,
         include: path.resolve(__dirname, "src"),
-        use: ["style-loader","css-loader", "postcss-loader", ],
+        use: ["style-loader", "css-loader", "postcss-loader",],
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
